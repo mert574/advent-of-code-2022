@@ -1,4 +1,6 @@
 import "../lib/array.js"
+import { isThisJest } from "../lib/misc.js"
+import readInput from "../lib/readInput.js"
 
 // round (0 lost, 3 draw, 6 won)
 const outcomeScore = { lose: 0, draw: 3, win: 6 }
@@ -42,4 +44,15 @@ export function part2(input) {
     .map((it) => it.split(" "))
     .map(([opponent, outcome]) => roundScore(opponent, outcomeMap[outcome]))
     .sum()
+}
+
+if (!isThisJest()) {
+  const example = readInput("./day-02/example.txt")
+  const input = readInput("./day-02/input.txt")
+
+  console.log("--- Day 2: Rock Paper Scissors ---")
+  console.table({
+    Part1: { Example: part1(example), Input: part1(input) },
+    Part2: { Example: part2(example), Input: part2(input) },
+  })
 }
