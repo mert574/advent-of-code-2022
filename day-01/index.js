@@ -1,4 +1,4 @@
-import "../lib/array"
+import "../lib/array.js"
 
 function sumOfCaloriesOfElves(input) {
   return input.split("\n\n").map(it => it.split("\n").map(Number).sum())
