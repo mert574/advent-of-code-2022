@@ -7,12 +7,13 @@ describe("Day 4: Camp Cleanup", () => {
 
   describe("Part 1: How many pairs fully contain the other?", () => {
     it("works with the example", () => expect(part1(example)).toBe(2))
+
     it("works with the real input", () => expect(part1(input)).toBe(532))
   })
 
   describe("Part 2: How many pairs have any overlapping slots?", () => {
     it("works with the example", () => expect(part2(example)).toBe(4))
+
     it("works with the real input", () => expect(part2(input)).toBe(854))
   })
-
 })

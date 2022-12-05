@@ -7,11 +7,13 @@ describe("Day 2: Rock Paper Scissors", () => {
 
   describe("Part 1: Second column is what you should play", () => {
     it("works with the example", () => expect(part1(example)).toBe(15))
+
     it("works with the real input", () => expect(part1(input)).toBe(11_666))
   })
 
   describe("Part 2: Second column is how the round needs to end", () => {
     it("works with the example", () => expect(part2(example)).toBe(12))
+
     it("works with the real input", () => expect(part2(input)).toBe(12_767))
   })
 })
