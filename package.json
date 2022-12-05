@@ -10,8 +10,9 @@
     "jest": "^29.3.1"
   },
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules yarn run jest",
-    "day": "NODE_OPTIONS=--experimental-vm-modules node",
+    "test": "NODE_OPTIONS=--experimental-vm-modules yarn jest --runInBand",
+    "day": "NODE_OPTIONS=--experimental-vm-modules yarn node",
     "start": "yarn day app.js"
-  }
+  },
+  "packageManager": "yarn@3.3.0"
 }

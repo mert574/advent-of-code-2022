@@ -2,7 +2,12 @@ node_modules
 # yarn cache files and build intermediaries
 .pnp.*
 .yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
 !.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 .DS_Store
 tmp
 .idea
