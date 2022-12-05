@@ -17,12 +17,12 @@ export function part1(input) {
 
 export function part2(input) {
   return input.split("\n")
-    .groupIntoChunks(3)
+    .splitIntoChunks(3)
     // find the items that are in all bags of the group
     .flatMap(([bag1, bag2, bag3]) => bag1.split("").intersection(bag2).intersection(bag3).uniq())
     // get char codes and normalize them by subtracting "a"
     .map(char => charCodeOf(char) - charCodeOf("a") + 1)
-    // now [A-Z] is between (-31)-(-6) and [a-z] between 1-26. need to fix [A-Z]
+    // now [a-z] between 1-26 and [A-Z] is between (-31)-(-6). need to fix [A-Z]
     .map(score => score > 0 ? score : (score + 58))
     .sum()
 }
